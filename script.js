@@ -64,30 +64,46 @@ let cards_array = document.querySelectorAll("div.card");
 }catch(e) {
 
 }
+exo 7 //////////////
+
+
+let rightButton = document.querySelector(
+  "section.jumbotron div.container a.btn-secondary"
+);
+
+
+
+rightButton.addEventListener("click", event =>{
   
-//================================================================================
-var button = document.querySelector('section.jumbotron div.container a.btn-secondary');
+  let cardsWrappers = document.querySelector("main div.container div.row");
 
-var list = document.querySelector('main div.container div.row');
-var child = list.children;
-var first = child[0]
-var last = child[5]
-console.log(last)
-console.log(first)
-button.addEventListener('click', event =>{
-  list.insertBefore(last, first );
-}) 
-//=============================================================================
-var button = document.querySelector('section.jumbotron div.container a.btn-primary');
+  let cardsArray2 = cardsWrappers.children
 
-var list = document.querySelector('main div.container div.row');
-var child = list.children;
-var first = child[0]
-var last = child[5]
-console.log(last)
-console.log(first)
-button.addEventListener('click', event =>{
-  button.removeAttribute('href')
-  list.appendChild(first);
-}) 
-//=============================================================================
+  let firstChilds = cardsArray2[0];
+  let length = cardsArray2.length;
+  let lastchild = cardsArray2[length -1];
+
+  cardsWrappers.insertBefore(lastchild, firstChilds)
+
+})
+
+
+exo8/////////////
+
+
+let leftButton = document.querySelector("a.btn-primary")
+
+leftButton.href='#';
+
+
+leftButton.addEventListener("click", (event) => {
+
+  let cardsWrapper = document.querySelector("main div.container div.row");
+
+  let cardsArray = cardsWrapper.children;
+
+  let firstChild = cardsArray[0];
+
+  cardsWrapper.appendChild(firstChild);
+  
+});
