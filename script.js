@@ -64,9 +64,6 @@ let cards_array = document.querySelectorAll("div.card");
 }catch(e) {
 
 }
-exo 7 //////////////
-
-
 let rightButton = document.querySelector(
   "section.jumbotron div.container a.btn-secondary"
 );
@@ -88,7 +85,6 @@ rightButton.addEventListener("click", event =>{
 })
 
 
-exo8/////////////
 
 
 let leftButton = document.querySelector("a.btn-primary")
